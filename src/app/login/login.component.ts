@@ -5,8 +5,8 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 
 @Component({ templateUrl: 'login.component.html' })
 export class LoginComponent implements OnInit{
-  public email: string;
-  public password: string;
+  // public email: string;
+  // public password: string;
 
   // public loginForm= new FormGroup({
   //   email: new FormControl(''),
@@ -22,8 +22,8 @@ export class LoginComponent implements OnInit{
               private router: Router,
               private formBuilder: FormBuilder
     ){
-      this.email = "";
-      this.password = "";
+      // this.email = "";
+      // this.password = "";
 
     // if( this.apiauthService.usuarioData){
     //   this.router.navigate(['/']);
