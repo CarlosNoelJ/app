@@ -18,7 +18,7 @@ import { DialogDeleteComponent } from "../app/common/delete/dialogdelete.compone
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,6 +41,7 @@ import { FormsModule } from '@angular/forms';
     MatSnackBarModule,
     MatCardModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [
