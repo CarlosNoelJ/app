@@ -1,3 +1,4 @@
+import { Login } from './../models/login';
 import { Usuario } from './../models/usuario';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -27,8 +28,10 @@ export class ApiauthService{
     this.usuarioSubject = new BehaviorSubject<Usuario>(JSON.parse(localStorage.getItem('usuario')!));
   }
 
-  login(email: string, password: string): Observable<Response>{
-    return this._http.post<Response>(this.url, {email, password}, httpOption).pipe(
+// login(email: string, password: string): Observable<Response>{
+//   return this._http.post<Response>(this.url, {email, password}, httpOption).pipe(
+  login(login: Login): Observable<Response>{
+    return this._http.post<Response>(this.url, login, httpOption).pipe(
       map(res => {
         if (res.exito === 1){
           const usuario: Usuario = res.data;
